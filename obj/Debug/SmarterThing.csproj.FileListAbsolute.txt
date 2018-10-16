@@ -1,0 +1,15 @@
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\SmarterThing.exe.config
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\SmarterThing.exe
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\SmarterThing.pdb
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.csprojAssemblyReference.cache
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.Form1.resources
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.Properties.Resources.resources
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.csproj.GenerateResource.cache
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.csproj.CoreCompileInputs.cache
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.exe
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.pdb
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\HtmlAgilityPack.dll
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\HtmlAgilityPack.xml
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.csproj.CopyComplete
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.AyarPaneli.resources

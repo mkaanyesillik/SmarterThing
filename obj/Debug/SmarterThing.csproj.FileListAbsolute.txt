@@ -13,3 +13,8 @@ C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\HtmlAgilityPack.
 C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\HtmlAgilityPack.xml
 C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.csproj.CopyComplete
 C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.AyarPaneli.resources
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\SmarterThing.exe.manifest
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\SmarterThing.application
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.TrustInfo.xml
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.exe.manifest
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.application

@@ -23,7 +23,7 @@ namespace SmarterThing
         {
             InitializeComponent();
         }
-        
+        #region Değişkenlerin Tümü
         public string kullaniciAdi { get; set; }
         public string sifre { get; set; }
         public string SehirLink { get; set; }
@@ -40,7 +40,8 @@ namespace SmarterThing
 
         double bugungunduzfahrenheit;
         string bugungunduz;
-
+        #endregion
+        #region userdll import ve lastinputinfo
         [DllImport("User32.dll")]
         private static extern bool
        GetLastInputInfo(ref LASTINPUTINFO plii);
@@ -67,6 +68,7 @@ namespace SmarterThing
 
             return ((idleTime > 0) ? (idleTime / 1000) : 0);
         }
+        #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
             if (ArkaPlanResmi=="")
@@ -198,7 +200,8 @@ namespace SmarterThing
             lblMail.Text = "Mail Sayısı : ";
             lblMailDetay.Text = "";
             MailCagir();
-
+            lblhaber.Text = "";
+            HaberlerSlider();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -300,6 +303,10 @@ namespace SmarterThing
             if (e.KeyCode==Keys.K)
             {
                 Application.Exit();
+            }
+            if (e.KeyCode==Keys.Escape)
+            {
+                this.Hide();
             }
             
         }   

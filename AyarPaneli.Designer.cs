@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnMailAyarlari = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullanici = new System.Windows.Forms.TextBox();
@@ -55,7 +56,8 @@
             this.btnRenkKaydet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnbaslangictacalistir = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -77,6 +79,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "E-Mail Ayarları";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(197, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "@gmail.com";
             // 
             // btnMailAyarlari
             // 
@@ -296,14 +308,14 @@
             this.groupBox4.Controls.Add(this.chkResim);
             this.groupBox4.Location = new System.Drawing.Point(292, 156);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(133, 80);
+            this.groupBox4.Size = new System.Drawing.Size(133, 117);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Arka Plan Ayarları";
             // 
             // btnResimSec
             // 
-            this.btnResimSec.Location = new System.Drawing.Point(6, 47);
+            this.btnResimSec.Location = new System.Drawing.Point(10, 83);
             this.btnResimSec.Name = "btnResimSec";
             this.btnResimSec.Size = new System.Drawing.Size(114, 23);
             this.btnResimSec.TabIndex = 2;
@@ -406,29 +418,43 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(289, 239);
+            this.label6.Location = new System.Drawing.Point(289, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 40);
+            this.label6.Size = new System.Drawing.Size(276, 29);
             this.label6.TabIndex = 6;
             this.label6.Text = "Ekran Koruyucu Ekranında K Tuşuna Basarsanız Program Komple Kapanır";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // btnbaslangictacalistir
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(197, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "@gmail.com";
+            this.btnbaslangictacalistir.Location = new System.Drawing.Point(153, 282);
+            this.btnbaslangictacalistir.Name = "btnbaslangictacalistir";
+            this.btnbaslangictacalistir.Size = new System.Drawing.Size(133, 23);
+            this.btnbaslangictacalistir.TabIndex = 7;
+            this.btnbaslangictacalistir.Text = "Başlangıçta Çalıştır";
+            this.btnbaslangictacalistir.UseVisualStyleBackColor = true;
+            this.btnbaslangictacalistir.Click += new System.EventHandler(this.btnbaslangictacalistir_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Çalıştır",
+            "Çalıştırma"});
+            this.comboBox1.Location = new System.Drawing.Point(13, 282);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // AyarPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(573, 288);
+            this.ClientSize = new System.Drawing.Size(573, 311);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnbaslangictacalistir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox5);
@@ -438,10 +464,12 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(589, 327);
+            this.MaximumSize = new System.Drawing.Size(589, 350);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(589, 327);
+            this.MinimumSize = new System.Drawing.Size(589, 350);
             this.Name = "AyarPaneli";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SmarterThing - Ayar Paneli";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AyarPaneli_Load);
@@ -488,5 +516,7 @@
         private System.Windows.Forms.TextBox txtG;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnbaslangictacalistir;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

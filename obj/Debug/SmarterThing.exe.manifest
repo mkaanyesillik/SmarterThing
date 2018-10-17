@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmarterThing.exe" size="50656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmarterThing.exe" size="265184">
       <assemblyIdentity name="SmarterThing" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Yu/js6EY3n0aauSJsm0m5fmv00jRUZ15HnhsR5/giz8=</dsig:DigestValue>
+        <dsig:DigestValue>NkgCqZG+kyuO1Hu2uuTgvvywzyXX+6PdTim1MOUrsCw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

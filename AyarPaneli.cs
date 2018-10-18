@@ -20,7 +20,6 @@ namespace SmarterThing
         string ProgramAdi = "SmarterThing";
         Form1 frm = new Form1();
         OpenFileDialog file = new OpenFileDialog();
-        NotifyIcon MyIcon = new NotifyIcon();
         private void btnMailAyarlari_Click(object sender, EventArgs e)
         {
             frm.kullaniciAdi = txtKullanici.Text + "@gmail.com";
@@ -188,13 +187,19 @@ namespace SmarterThing
             txtB.Enabled = false;
             cmbSehir.SelectedIndex = 34;
             comboBox1.SelectedIndex = 0;
-
+            MyIcon.Icon = new Icon(@"C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\favicon.ico");
 
         }
         int k = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MyIcon.Visible = true;
+            MyIcon.Text = "SmarterThing - Kapatma Paneli";
+            MyIcon.BalloonTipTitle = "SmarterThing'i Kapatın";
+            MyIcon.BalloonTipText = "SmarterThing Aşağıda Aktif Eğer Kapatmak İsterseniz Çift Tıklamanız Yeterlidir.";
+            MyIcon.BalloonTipIcon = ToolTipIcon.Info;
+            MyIcon.ShowBalloonTip(30000);
             switch (cmbSehir.Text)
             {
 
@@ -297,7 +302,7 @@ namespace SmarterThing
                     frm.ArkaPlanRengiB = txtB.Text;
                     frm.sifre = txtSifre.Text;
                     frm.Show();
-                    this.Hide();
+                    Hide();
                     k++;
                 }
                 else
@@ -312,7 +317,7 @@ namespace SmarterThing
                     frm.ArkaPlanRengiB = txtB.Text;
                     frm.sifre = txtSifre.Text;
                     frm.Show();
-                    this.Hide();
+                    Hide();
                     k = 0;
                 }
             }
@@ -354,6 +359,22 @@ namespace SmarterThing
             {
                 btnbaslangictacalistir.Text = "Başlangıçta Çalıştırma";
             }
+        }
+
+        private void AyarPaneli_Resize(object sender, EventArgs e)
+        {
+           
+                Hide();
+                
+            
+        }
+
+        private void MyIcon_MouseDoubleClick_1(object sender, MouseEventArgs e)
+        {
+            frmKapanis frm = new frmKapanis();
+            frm.Show();
+            
+            MyIcon.Visible = false;
         }
     }
 }

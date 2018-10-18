@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AyarPaneli));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnMailAyarlari = new System.Windows.Forms.Button();
@@ -58,6 +60,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnbaslangictacalistir = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.MyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -447,6 +450,13 @@
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // MyIcon
+            // 
+            this.MyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("MyIcon.Icon")));
+            this.MyIcon.Text = "MyIcon";
+            this.MyIcon.Visible = true;
+            this.MyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MyIcon_MouseDoubleClick_1);
+            // 
             // AyarPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,6 +483,7 @@
             this.Text = "SmarterThing - Ayar Paneli";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AyarPaneli_Load);
+            this.Resize += new System.EventHandler(this.AyarPaneli_Resize);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -518,5 +529,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnbaslangictacalistir;
         private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.NotifyIcon MyIcon;
     }
 }

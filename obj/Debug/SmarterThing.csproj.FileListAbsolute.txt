@@ -18,3 +18,4 @@ C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\bin\Debug\SmarterThing.app
 C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.TrustInfo.xml
 C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.exe.manifest
 C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.application
+C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\obj\Debug\SmarterThing.frmKapanis.resources

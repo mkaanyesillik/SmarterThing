@@ -258,7 +258,7 @@ namespace SmarterThing
                 string response;
                 string title;
                 string summary;
-
+                
                 XmlDocument doc = new XmlDocument();
 
                 objClient.Credentials = new System.Net.NetworkCredential(kullaniciAdi, sifre);

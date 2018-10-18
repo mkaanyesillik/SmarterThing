@@ -34,6 +34,7 @@ namespace SmarterThing
         public string ArkaPlanRengiG { get; set; }
         public string ArkaPlanRengiB { get; set; }
         public string ArkaPlanSeffaf { get; set; }
+        public string DevredenCikart { get; set; }
         public bool K1 { get => K; set => K = value; }
         public bool L1 { get => L; set => L = value; }
         public bool K2 { get => K; set => K = value; }
@@ -72,13 +73,13 @@ namespace SmarterThing
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (ArkaPlanResmi=="")
+            if (ArkaPlanResmi == "")
             {
-                if (ArkaPlanRengiR=="R"&&ArkaPlanRengiG=="G" && ArkaPlanRengiB =="B" && ArkaPlanSeffaf == "bosbu")
+                if (ArkaPlanRengiR == "R" && ArkaPlanRengiG == "G" && ArkaPlanRengiB == "B" && ArkaPlanSeffaf == "bosbu")
                 {
-                    this.BackColor = Color.FromArgb(0,0,0);
+                    this.BackColor = Color.FromArgb(0, 0, 0);
                 }
-                else if (ArkaPlanSeffaf== "LightSalmon")
+                else if (ArkaPlanSeffaf == "LightSalmon")
                 {
                     this.BackColor = Color.LightSalmon;
                 }
@@ -93,6 +94,7 @@ namespace SmarterThing
                 this.BackgroundImage = Image.FromFile(ArkaPlanResmi);
                 this.BackgroundImageLayout = ImageLayout.Center;
             }
+
             Saat.Start();
             graphic.Start();
             ScreenSaver.Start();
@@ -105,15 +107,16 @@ namespace SmarterThing
             HtmlAgilityPack.HtmlDocument dokuman = new HtmlAgilityPack.HtmlDocument();
             dokuman.LoadHtml(html);
 
-            if (dokuman.DocumentNode.SelectNodes("/html/body/div[1]/div/div/div[12]/div/div[3]/main/div[3]/div/article/div/table/tbody/tr[1]/td[4]/div/span[1]")[0].InnerText=="--")
+            if (dokuman.DocumentNode.SelectNodes("/html/body/div[1]/div/div/div[12]/div/div[3]/main/div[3]/div/article/div/table/tbody/tr[1]/td[4]/div/span[1]")[0].InnerText == "--")
             {
-              bugungunduzfahrenheit = 25;
+                bugungunduzfahrenheit = 25;
             }
-            else { 
-            bugungunduzfahrenheit = Convert.ToDouble(dokuman.DocumentNode.SelectNodes("/html/body/div[1]/div/div/div[12]/div/div[3]/main/div[3]/div/article/div/table/tbody/tr[1]/td[4]/div/span[1]")[0].InnerText.Remove(2, 2)) - 32;
+            else
+            {
+                bugungunduzfahrenheit = Convert.ToDouble(dokuman.DocumentNode.SelectNodes("/html/body/div[1]/div/div/div[12]/div/div[3]/main/div[3]/div/article/div/table/tbody/tr[1]/td[4]/div/span[1]")[0].InnerText.Remove(2, 2)) - 32;
 
-            double bugungunduzhesaplama = bugungunduzfahrenheit / 1.8;
-            bugungunduz = bugungunduzhesaplama.ToString().Remove(2, bugungunduzhesaplama.ToString().Length - 2);
+                double bugungunduzhesaplama = bugungunduzfahrenheit / 1.8;
+                bugungunduz = bugungunduzhesaplama.ToString().Remove(2, bugungunduzhesaplama.ToString().Length - 2);
             }
 
             //------//
@@ -225,8 +228,13 @@ namespace SmarterThing
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
 
-            //this.Hide();
-
+            if (DevredenCikart == "Hareket")
+            {
+                if (GetLastInputTime() == 0)
+                {
+                    Hide();
+                }
+            }
         }
 
         int i = Screen.PrimaryScreen.Bounds.Width;
@@ -264,7 +272,7 @@ namespace SmarterThing
                 string response;
                 string title;
                 string summary;
-                
+
                 XmlDocument doc = new XmlDocument();
 
                 objClient.Credentials = new System.Net.NetworkCredential(kullaniciAdi, sifre);
@@ -300,6 +308,7 @@ namespace SmarterThing
             if (GetLastInputTime() == Convert.ToInt32(DevreyeGirisZamani))
             {
                 Show();
+                i = Screen.PrimaryScreen.Bounds.Width;
                 graphic.Start();
             }
         }
@@ -307,16 +316,15 @@ namespace SmarterThing
         bool L;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.K)
+            if (e.KeyCode == Keys.K)
             {
                 Application.Exit();
             }
-            if (e.KeyCode==Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
                 this.Hide();
             }
-            
-        }   
-    }       
-}           
-            
+
+        }
+    }
+}

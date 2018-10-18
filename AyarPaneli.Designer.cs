@@ -32,16 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AyarPaneli));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnMailAyarlari = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullanici = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnHavaDurumuKaydet = new System.Windows.Forms.Button();
             this.cmbSehir = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnZamanlayici = new System.Windows.Forms.Button();
             this.txtHaberAkisHizi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEkranKoruyucuZamani = new System.Windows.Forms.TextBox();
@@ -54,28 +51,30 @@
             this.chkResim = new System.Windows.Forms.CheckBox();
             this.chkRenk = new System.Windows.Forms.CheckBox();
             this.txtR = new System.Windows.Forms.TextBox();
-            this.btnRenkKaydet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnbaslangictacalistir = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.MyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbDevredenCikarma = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btnMailAyarlari);
             this.groupBox1.Controls.Add(this.txtSifre);
             this.groupBox1.Controls.Add(this.txtKullanici);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 136);
+            this.groupBox1.Size = new System.Drawing.Size(273, 107);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "E-Mail Ayarları";
@@ -89,16 +88,6 @@
             this.label7.Size = new System.Drawing.Size(65, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "@gmail.com";
-            // 
-            // btnMailAyarlari
-            // 
-            this.btnMailAyarlari.Location = new System.Drawing.Point(10, 102);
-            this.btnMailAyarlari.Name = "btnMailAyarlari";
-            this.btnMailAyarlari.Size = new System.Drawing.Size(252, 23);
-            this.btnMailAyarlari.TabIndex = 4;
-            this.btnMailAyarlari.Text = "Kaydet";
-            this.btnMailAyarlari.UseVisualStyleBackColor = true;
-            this.btnMailAyarlari.Click += new System.EventHandler(this.btnMailAyarlari_Click);
             // 
             // txtSifre
             // 
@@ -135,24 +124,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnHavaDurumuKaydet);
             this.groupBox2.Controls.Add(this.cmbSehir);
-            this.groupBox2.Location = new System.Drawing.Point(13, 155);
+            this.groupBox2.Location = new System.Drawing.Point(13, 126);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(273, 81);
+            this.groupBox2.Size = new System.Drawing.Size(273, 53);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hava Durumu Konumu";
-            // 
-            // btnHavaDurumuKaydet
-            // 
-            this.btnHavaDurumuKaydet.Location = new System.Drawing.Point(10, 48);
-            this.btnHavaDurumuKaydet.Name = "btnHavaDurumuKaydet";
-            this.btnHavaDurumuKaydet.Size = new System.Drawing.Size(252, 23);
-            this.btnHavaDurumuKaydet.TabIndex = 1;
-            this.btnHavaDurumuKaydet.Text = "Kaydet";
-            this.btnHavaDurumuKaydet.UseVisualStyleBackColor = true;
-            this.btnHavaDurumuKaydet.Click += new System.EventHandler(this.btnHavaDurumuKaydet_Click);
             // 
             // cmbSehir
             // 
@@ -246,27 +224,16 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnZamanlayici);
             this.groupBox3.Controls.Add(this.txtHaberAkisHizi);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtEkranKoruyucuZamani);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(292, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(273, 137);
+            this.groupBox3.Size = new System.Drawing.Size(273, 107);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Zamanlayıcı Ayarları";
-            // 
-            // btnZamanlayici
-            // 
-            this.btnZamanlayici.Location = new System.Drawing.Point(10, 102);
-            this.btnZamanlayici.Name = "btnZamanlayici";
-            this.btnZamanlayici.Size = new System.Drawing.Size(252, 23);
-            this.btnZamanlayici.TabIndex = 5;
-            this.btnZamanlayici.Text = "Kaydet";
-            this.btnZamanlayici.UseVisualStyleBackColor = true;
-            this.btnZamanlayici.Click += new System.EventHandler(this.btnZamanlayici_Click);
             // 
             // txtHaberAkisHizi
             // 
@@ -311,10 +278,9 @@
             this.groupBox4.Controls.Add(this.chkResim);
             this.groupBox4.Controls.Add(this.chkRenk);
             this.groupBox4.Controls.Add(this.txtR);
-            this.groupBox4.Controls.Add(this.btnRenkKaydet);
-            this.groupBox4.Location = new System.Drawing.Point(292, 156);
+            this.groupBox4.Location = new System.Drawing.Point(292, 126);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(273, 149);
+            this.groupBox4.Size = new System.Drawing.Size(273, 125);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Arka Plan Ayarları";
@@ -389,35 +355,15 @@
             this.txtR.Text = "R";
             this.txtR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnRenkKaydet
-            // 
-            this.btnRenkKaydet.Location = new System.Drawing.Point(137, 90);
-            this.btnRenkKaydet.Name = "btnRenkKaydet";
-            this.btnRenkKaydet.Size = new System.Drawing.Size(125, 23);
-            this.btnRenkKaydet.TabIndex = 2;
-            this.btnRenkKaydet.Text = "Renk Kaydet";
-            this.btnRenkKaydet.UseVisualStyleBackColor = true;
-            this.btnRenkKaydet.Click += new System.EventHandler(this.btnRenkKaydet_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 239);
+            this.button1.Location = new System.Drawing.Point(13, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(273, 37);
             this.button1.TabIndex = 5;
-            this.button1.Text = "TOPLU KAYDET ve GİZLE";
+            this.button1.Text = "KAYDET ve GİZLE";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnbaslangictacalistir
-            // 
-            this.btnbaslangictacalistir.Location = new System.Drawing.Point(153, 282);
-            this.btnbaslangictacalistir.Name = "btnbaslangictacalistir";
-            this.btnbaslangictacalistir.Size = new System.Drawing.Size(133, 23);
-            this.btnbaslangictacalistir.TabIndex = 7;
-            this.btnbaslangictacalistir.Text = "Başlangıçta Çalıştır";
-            this.btnbaslangictacalistir.UseVisualStyleBackColor = true;
-            this.btnbaslangictacalistir.Click += new System.EventHandler(this.btnbaslangictacalistir_Click);
             // 
             // comboBox1
             // 
@@ -425,11 +371,10 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Çalıştır",
             "Çalıştırma"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 282);
+            this.comboBox1.Location = new System.Drawing.Point(117, 19);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 21);
+            this.comboBox1.Size = new System.Drawing.Size(145, 21);
             this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MyIcon
             // 
@@ -438,14 +383,55 @@
             this.MyIcon.Visible = true;
             this.MyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MyIcon_MouseDoubleClick_1);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.cmbDevredenCikarma);
+            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Location = new System.Drawing.Point(13, 185);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(273, 86);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Uygulama Ayarları";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Devreden Çıkartma :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Başlangıçta Çalıştır :";
+            // 
+            // cmbDevredenCikarma
+            // 
+            this.cmbDevredenCikarma.FormattingEnabled = true;
+            this.cmbDevredenCikarma.Items.AddRange(new object[] {
+            "Mouse Hareketi İle",
+            "Tıklayarak"});
+            this.cmbDevredenCikarma.Location = new System.Drawing.Point(117, 54);
+            this.cmbDevredenCikarma.Name = "cmbDevredenCikarma";
+            this.cmbDevredenCikarma.Size = new System.Drawing.Size(145, 21);
+            this.cmbDevredenCikarma.TabIndex = 11;
+            // 
             // AyarPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(573, 311);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnbaslangictacalistir);
+            this.ClientSize = new System.Drawing.Size(573, 331);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -453,9 +439,9 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(589, 350);
+            this.MaximumSize = new System.Drawing.Size(589, 370);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(589, 350);
+            this.MinimumSize = new System.Drawing.Size(589, 360);
             this.Name = "AyarPaneli";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -470,6 +456,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -477,33 +465,32 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnMailAyarlari;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtKullanici;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnHavaDurumuKaydet;
         private System.Windows.Forms.ComboBox cmbSehir;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtHaberAkisHizi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEkranKoruyucuZamani;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnZamanlayici;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnResimSec;
         private System.Windows.Forms.CheckBox chkResim;
         private System.Windows.Forms.CheckBox chkRenk;
         private System.Windows.Forms.TextBox txtR;
-        private System.Windows.Forms.Button btnRenkKaydet;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.TextBox txtG;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnbaslangictacalistir;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.NotifyIcon MyIcon;
         private System.Windows.Forms.CheckBox chkSeffaf;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbDevredenCikarma;
     }
 }

@@ -261,5 +261,9 @@ namespace SmarterThing
             MyIcon.Visible = false;
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.kaanyesillik.com");
+        }
     }
 }

@@ -58,6 +58,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbDevredenCikarma = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -425,12 +426,27 @@
             this.cmbDevredenCikarma.Size = new System.Drawing.Size(145, 21);
             this.cmbDevredenCikarma.TabIndex = 11;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(359, 301);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(206, 21);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Yazara Ulaş : Kaan Yeşillik";
+            this.label8.UseWaitCursor = true;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // AyarPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(573, 331);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox4);
@@ -459,6 +475,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -492,5 +509,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbDevredenCikarma;
+        private System.Windows.Forms.Label label8;
     }
 }

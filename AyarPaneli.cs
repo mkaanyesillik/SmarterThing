@@ -122,49 +122,69 @@ namespace SmarterThing
             frm.HaberAkisHizi = txtHaberAkisHizi.Text;
             btnZamanlayici.Text = "Kayıt Başarılı";
         }
-        int i = 0;
-        private void chkResim_CheckedChanged(object sender, EventArgs e)
+        #region CheckBox Settings
+        private void chkSeffaf_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (i == 0)
+            if (chkSeffaf.Checked == true)
             {
-                groupBox5.Enabled = false;
-                btnResimSec.Enabled = true;
-                i++;
+                btnRenkKaydet.Enabled = false;
+                btnResimSec.Enabled = false;
+                txtR.Enabled = false;
+                txtG.Enabled = false;
+                txtB.Enabled = false;
+                chkResim.Enabled = false;
+                chkRenk.Enabled = false;
             }
             else
             {
-                groupBox5.Enabled = true;
-                btnResimSec.Enabled = false;
-
-                i = 0;
-            }
-
-        }
-
-        private void chkRenk_CheckedChanged(object sender, EventArgs e)
-        {
-            if (i == 0)
-            {
-                groupBox4.Enabled = false;
                 btnRenkKaydet.Enabled = true;
+                btnResimSec.Enabled = true;
                 txtR.Enabled = true;
                 txtG.Enabled = true;
                 txtB.Enabled = true;
-
-                i++;
+                chkResim.Enabled = true;
+                chkRenk.Enabled = true;
             }
-            else
+        }
+
+        private void chkResim_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkResim.Checked == true)
             {
-                groupBox4.Enabled = true;
                 btnRenkKaydet.Enabled = false;
                 txtR.Enabled = false;
                 txtG.Enabled = false;
                 txtB.Enabled = false;
-                i = 0;
+                chkSeffaf.Enabled = false;
+                chkRenk.Enabled = false;
+            }
+            else
+            {
+                btnRenkKaydet.Enabled = true;
+                txtR.Enabled = true;
+                txtG.Enabled = true;
+                txtB.Enabled = true;
+                chkRenk.Enabled = true;
+                chkSeffaf.Enabled = true;
             }
         }
 
+        private void chkRenk_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkRenk.Checked == true)
+            {
+                btnResimSec.Enabled = false;
+                chkSeffaf.Enabled = false;
+                chkResim.Enabled = false;
+            }
+            else
+            {
+                btnResimSec.Enabled = true;
+                chkResim.Enabled = true;
+                chkSeffaf.Enabled = true;
+            }
+        }
+        #endregion
         private void btnResimSec_Click(object sender, EventArgs e)
         {
             file.Filter = "Fotograf Dosyası |*.jpg";
@@ -176,6 +196,14 @@ namespace SmarterThing
                 btnResimSec.Text = "Resim Seçildi";
                 btnResimSec.Enabled = false;
             }
+        }
+        private void btnRenkKaydet_Click(object sender, EventArgs e)
+        {
+
+            frm.ArkaPlanRengiR = txtR.Text;
+            frm.ArkaPlanRengiG = txtG.Text;
+            frm.ArkaPlanRengiB = txtB.Text;
+            btnRenkKaydet.Text = "Kayıt Başarılı";
         }
 
         private void AyarPaneli_Load(object sender, EventArgs e)
@@ -190,7 +218,6 @@ namespace SmarterThing
             MyIcon.Icon = new Icon(@"C:\Users\mkaan\source\repos\SmarterThing\SmarterThing\favicon.ico");
 
         }
-        int k = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -291,52 +318,29 @@ namespace SmarterThing
             }
             else
             {
-                if (k == 0)
+                frm.ArkaPlanResmi = file.FileName;
+                frm.DevreyeGirisZamani = txtEkranKoruyucuZamani.Text;
+                frm.HaberAkisHizi = txtHaberAkisHizi.Text;
+                frm.kullaniciAdi = txtKullanici.Text;
+                frm.ArkaPlanRengiR = txtR.Text;
+                frm.ArkaPlanRengiG = txtG.Text;
+                frm.ArkaPlanRengiB = txtB.Text;
+                if (chkSeffaf.Checked == true)
                 {
-                    frm.ArkaPlanResmi = file.FileName;
-                    frm.DevreyeGirisZamani = txtEkranKoruyucuZamani.Text;
-                    frm.HaberAkisHizi = txtHaberAkisHizi.Text;
-                    frm.kullaniciAdi = txtKullanici.Text;
-                    frm.ArkaPlanRengiR = txtR.Text;
-                    frm.ArkaPlanRengiG = txtG.Text;
-                    frm.ArkaPlanRengiB = txtB.Text;
-                    frm.sifre = txtSifre.Text;
-                    frm.Show();
-                    Hide();
-                    k++;
+                    frm.ArkaPlanSeffaf = "LightSalmon";
                 }
                 else
                 {
-                    frm.Close();
-                    frm.ArkaPlanResmi = file.FileName;
-                    frm.DevreyeGirisZamani = txtEkranKoruyucuZamani.Text;
-                    frm.HaberAkisHizi = txtHaberAkisHizi.Text;
-                    frm.kullaniciAdi = txtKullanici.Text;
-                    frm.ArkaPlanRengiR = txtR.Text;
-                    frm.ArkaPlanRengiG = txtG.Text;
-                    frm.ArkaPlanRengiB = txtB.Text;
-                    frm.sifre = txtSifre.Text;
-                    frm.Show();
-                    Hide();
-                    k = 0;
+                    frm.ArkaPlanSeffaf = "bosbu";
                 }
+                frm.sifre = txtSifre.Text;
+                frm.Show();
+                Hide();
             }
-
-        }
-        private void btnRenkKaydet_Click(object sender, EventArgs e)
-        {
-
-            frm.ArkaPlanRengiR = txtR.Text;
-            frm.ArkaPlanRengiG = txtG.Text;
-            frm.ArkaPlanRengiB = txtB.Text;
-            btnRenkKaydet.Text = "Kayıt Başarılı";
         }
 
         private void btnbaslangictacalistir_Click(object sender, EventArgs e)
         {
-
-
-
             if (comboBox1.Text == "Çalıştır")
             {
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
@@ -351,7 +355,7 @@ namespace SmarterThing
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex==0)
+            if (comboBox1.SelectedIndex == 0)
             {
                 btnbaslangictacalistir.Text = "Başlangıçta Çalıştır";
             }
@@ -363,18 +367,19 @@ namespace SmarterThing
 
         private void AyarPaneli_Resize(object sender, EventArgs e)
         {
-           
-                Hide();
-                
-            
+
+            Hide();
+
+
         }
 
         private void MyIcon_MouseDoubleClick_1(object sender, MouseEventArgs e)
         {
             frmKapanis frm = new frmKapanis();
             frm.Show();
-            
+
             MyIcon.Visible = false;
         }
+
     }
 }

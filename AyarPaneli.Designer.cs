@@ -47,17 +47,15 @@
             this.txtEkranKoruyucuZamani = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkSeffaf = new System.Windows.Forms.CheckBox();
+            this.txtB = new System.Windows.Forms.TextBox();
             this.btnResimSec = new System.Windows.Forms.Button();
+            this.txtG = new System.Windows.Forms.TextBox();
             this.chkResim = new System.Windows.Forms.CheckBox();
             this.chkRenk = new System.Windows.Forms.CheckBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtB = new System.Windows.Forms.TextBox();
-            this.txtG = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtR = new System.Windows.Forms.TextBox();
             this.btnRenkKaydet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnbaslangictacalistir = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.MyIcon = new System.Windows.Forms.NotifyIcon(this.components);
@@ -65,7 +63,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -307,24 +304,59 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.chkSeffaf);
+            this.groupBox4.Controls.Add(this.txtB);
             this.groupBox4.Controls.Add(this.btnResimSec);
+            this.groupBox4.Controls.Add(this.txtG);
             this.groupBox4.Controls.Add(this.chkResim);
+            this.groupBox4.Controls.Add(this.chkRenk);
+            this.groupBox4.Controls.Add(this.txtR);
+            this.groupBox4.Controls.Add(this.btnRenkKaydet);
             this.groupBox4.Location = new System.Drawing.Point(292, 156);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(133, 117);
+            this.groupBox4.Size = new System.Drawing.Size(273, 149);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Arka Plan Ayarları";
             // 
+            // chkSeffaf
+            // 
+            this.chkSeffaf.AutoSize = true;
+            this.chkSeffaf.Location = new System.Drawing.Point(10, 45);
+            this.chkSeffaf.Name = "chkSeffaf";
+            this.chkSeffaf.Size = new System.Drawing.Size(99, 17);
+            this.chkSeffaf.TabIndex = 11;
+            this.chkSeffaf.Text = "Şeffaf Arkaplan";
+            this.chkSeffaf.UseVisualStyleBackColor = true;
+            this.chkSeffaf.CheckedChanged += new System.EventHandler(this.chkSeffaf_CheckedChanged);
+            // 
+            // txtB
+            // 
+            this.txtB.Location = new System.Drawing.Point(93, 92);
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(38, 20);
+            this.txtB.TabIndex = 10;
+            this.txtB.Text = "B";
+            this.txtB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnResimSec
             // 
-            this.btnResimSec.Location = new System.Drawing.Point(10, 83);
+            this.btnResimSec.Location = new System.Drawing.Point(71, 17);
             this.btnResimSec.Name = "btnResimSec";
-            this.btnResimSec.Size = new System.Drawing.Size(114, 23);
+            this.btnResimSec.Size = new System.Drawing.Size(191, 23);
             this.btnResimSec.TabIndex = 2;
             this.btnResimSec.Text = "Resim Seç";
             this.btnResimSec.UseVisualStyleBackColor = true;
             this.btnResimSec.Click += new System.EventHandler(this.btnResimSec_Click);
+            // 
+            // txtG
+            // 
+            this.txtG.Location = new System.Drawing.Point(53, 92);
+            this.txtG.Name = "txtG";
+            this.txtG.Size = new System.Drawing.Size(34, 20);
+            this.txtG.TabIndex = 9;
+            this.txtG.Text = "G";
+            this.txtG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // chkResim
             // 
@@ -340,59 +372,17 @@
             // chkRenk
             // 
             this.chkRenk.AutoSize = true;
-            this.chkRenk.Location = new System.Drawing.Point(9, 21);
+            this.chkRenk.Location = new System.Drawing.Point(10, 68);
             this.chkRenk.Name = "chkRenk";
-            this.chkRenk.Size = new System.Drawing.Size(52, 17);
+            this.chkRenk.Size = new System.Drawing.Size(90, 17);
             this.chkRenk.TabIndex = 7;
-            this.chkRenk.Text = "Renk";
+            this.chkRenk.Text = "Renk Değiştir";
             this.chkRenk.UseVisualStyleBackColor = true;
             this.chkRenk.CheckedChanged += new System.EventHandler(this.chkRenk_CheckedChanged);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txtB);
-            this.groupBox5.Controls.Add(this.txtG);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.txtR);
-            this.groupBox5.Controls.Add(this.btnRenkKaydet);
-            this.groupBox5.Controls.Add(this.chkRenk);
-            this.groupBox5.Location = new System.Drawing.Point(431, 156);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(134, 117);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Arka Plan Ayarları";
-            // 
-            // txtB
-            // 
-            this.txtB.Location = new System.Drawing.Point(90, 57);
-            this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(38, 20);
-            this.txtB.TabIndex = 10;
-            this.txtB.Text = "B";
-            this.txtB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtG
-            // 
-            this.txtG.Location = new System.Drawing.Point(50, 57);
-            this.txtG.Name = "txtG";
-            this.txtG.Size = new System.Drawing.Size(34, 20);
-            this.txtG.TabIndex = 9;
-            this.txtG.Text = "G";
-            this.txtG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Renk Kodu (RGB)";
-            // 
             // txtR
             // 
-            this.txtR.Location = new System.Drawing.Point(6, 57);
+            this.txtR.Location = new System.Drawing.Point(9, 92);
             this.txtR.Name = "txtR";
             this.txtR.Size = new System.Drawing.Size(38, 20);
             this.txtR.TabIndex = 8;
@@ -401,9 +391,9 @@
             // 
             // btnRenkKaydet
             // 
-            this.btnRenkKaydet.Location = new System.Drawing.Point(9, 83);
+            this.btnRenkKaydet.Location = new System.Drawing.Point(137, 90);
             this.btnRenkKaydet.Name = "btnRenkKaydet";
-            this.btnRenkKaydet.Size = new System.Drawing.Size(117, 23);
+            this.btnRenkKaydet.Size = new System.Drawing.Size(125, 23);
             this.btnRenkKaydet.TabIndex = 2;
             this.btnRenkKaydet.Text = "Renk Kaydet";
             this.btnRenkKaydet.UseVisualStyleBackColor = true;
@@ -418,15 +408,6 @@
             this.button1.Text = "TOPLU KAYDET ve GİZLE";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(289, 276);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(276, 29);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ekran Koruyucu Ekranında K Tuşuna Basarsanız Program Komple Kapanır";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnbaslangictacalistir
             // 
@@ -465,9 +446,7 @@
             this.ClientSize = new System.Drawing.Size(573, 311);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnbaslangictacalistir);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -491,8 +470,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -518,17 +495,15 @@
         private System.Windows.Forms.Button btnResimSec;
         private System.Windows.Forms.CheckBox chkResim;
         private System.Windows.Forms.CheckBox chkRenk;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtR;
         private System.Windows.Forms.Button btnRenkKaydet;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.TextBox txtG;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnbaslangictacalistir;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.NotifyIcon MyIcon;
+        private System.Windows.Forms.CheckBox chkSeffaf;
     }
 }

@@ -33,6 +33,7 @@ namespace SmarterThing
         public string ArkaPlanRengiR { get; set; }
         public string ArkaPlanRengiG { get; set; }
         public string ArkaPlanRengiB { get; set; }
+        public string ArkaPlanSeffaf { get; set; }
         public bool K1 { get => K; set => K = value; }
         public bool L1 { get => L; set => L = value; }
         public bool K2 { get => K; set => K = value; }
@@ -73,13 +74,18 @@ namespace SmarterThing
         {
             if (ArkaPlanResmi=="")
             {
-                if (ArkaPlanRengiR=="R"||ArkaPlanRengiG=="G"||ArkaPlanRengiB=="B")
+                if (ArkaPlanRengiR=="R"&&ArkaPlanRengiG=="G" && ArkaPlanRengiB =="B" && ArkaPlanSeffaf == "bosbu")
                 {
-                    this.BackColor = Color.FromArgb(0, 0, 0);
+                    this.BackColor = Color.FromArgb(0,0,0);
                 }
-                else
+                else if (ArkaPlanSeffaf== "LightSalmon")
+                {
+                    this.BackColor = Color.LightSalmon;
+                }
+                else if (ArkaPlanRengiR != "R" || ArkaPlanRengiG != "G" || ArkaPlanRengiB != "B")
                 {
                     this.BackColor = Color.FromArgb(Convert.ToInt32(ArkaPlanRengiR), Convert.ToInt32(ArkaPlanRengiG), Convert.ToInt32(ArkaPlanRengiB));
+
                 }
             }
             else
@@ -294,6 +300,7 @@ namespace SmarterThing
             if (GetLastInputTime() == Convert.ToInt32(DevreyeGirisZamani))
             {
                 Show();
+                graphic.Start();
             }
         }
         bool K;
